@@ -1,0 +1,275 @@
+import { TeamMember, EventItem } from '@/types';
+
+export const CLUB_INFO = {
+  name: 'NEXORA',
+  department: 'Computer Science & Engineering',
+  tagline: 'Think Beyond. Solve Smarter. Build the Future.',
+  spirit: 'Be Curious. Be Creative. Be NEXORA.',
+  overview: `NEXORA is a technical club exclusively for Computer Science and Engineering students. It encourages logical thinking, creative problem-solving, coding skills, and practical implementation. It gives students a platform to move beyond theoretical learning, explore new approaches, collaborate with peers, and transform knowledge into meaningful solutions.
+
+Through interactive challenges, technical activities, collaborative learning, and hands-on projects, NEXORA aims to help students discover their potential, develop technical confidence, and prepare to tackle real-world challenges.`,
+  vision: `To build a community of innovative, analytical, and technically skilled CSE students who can think independently, solve complex problems, and create solutions that make a difference.`,
+  mission: [
+    'Encourage logical, analytical, and critical thinking.',
+    'Promote coding, creativity, and practical technical knowledge.',
+    'Help students identify problems and develop effective solutions.',
+    'Connect classroom learning with real-world application.',
+    'Encourage teamwork, communication, and collaborative learning.',
+    'Inspire students to turn ideas into working projects.'
+  ],
+  pillars: [
+    {
+      id: 'think',
+      title: 'THINK',
+      subtitle: 'Analyse & Reason',
+      description: 'Deconstruct complex computational problems, challenge assumptions, and cultivate a deep analytical mindset before writing a single line of code.',
+      icon: 'Brain',
+      color: 'from-purple-500 to-violet-500'
+    },
+    {
+      id: 'solve',
+      title: 'SOLVE',
+      subtitle: 'Find Effective Solutions',
+      description: 'Architect efficient algorithms, optimize systems, and formulate elegant answers to demanding technical and real-world engineering challenges.',
+      icon: 'Zap',
+      color: 'from-electric-blue to-cyan'
+    },
+    {
+      id: 'build',
+      title: 'BUILD',
+      subtitle: 'Turn Ideas into Action',
+      description: 'Transform blueprints into production-ready software, hackathon-winning prototypes, open-source repositories, and impactful digital products.',
+      icon: 'Code2',
+      color: 'from-violet-500 to-electric-blue'
+    }
+  ],
+  objectives: [
+    {
+      title: 'Critical Thinking',
+      description: 'Analyse situations, question assumptions, and approach challenges from different perspectives.',
+      code: 'OBJ-01'
+    },
+    {
+      title: 'Problem Solving',
+      description: 'Encourage logical reasoning and structured approaches to technical problems.',
+      code: 'OBJ-02'
+    },
+    {
+      title: 'Implementation',
+      description: 'Apply knowledge by building programs, prototypes, and practical solutions.',
+      code: 'OBJ-03'
+    },
+    {
+      title: 'Innovation',
+      description: 'Encourage original ideas and creative approaches to technology.',
+      code: 'OBJ-04'
+    },
+    {
+      title: 'Collaboration',
+      description: 'Create opportunities to exchange knowledge, work in teams, and learn from peers.',
+      code: 'OBJ-05'
+    }
+  ],
+  activities: [
+    { name: 'Coding Challenges', desc: 'Algorithmic battles and speed programming contests to sharpen syntax and problem-solving speed.' },
+    { name: 'Problem of the Week', desc: 'Curated weekly logic teasers and DSA challenges with peer solution discussions.' },
+    { name: 'Technical Quizzes', desc: 'Rapid-fire assessments covering system design, OS internals, web architecture, and AI.' },
+    { name: 'Debugging Challenges', desc: 'Real-world codebase bug hunting, vulnerability fixes, and code optimization races.' },
+    { name: 'Innovation & Implementation', desc: 'Hands-on hackathons and sprint workshops turning raw concepts into working prototypes.' },
+    { name: 'Collaborative Activities', desc: 'Team coding sessions, open-source sprints, and peer mentorship circles.' },
+    { name: 'Technical Learning Sessions', desc: 'Student-led tech talks on modern stacks, cloud infrastructure, AI models, and dev tools.' }
+  ],
+  values: [
+    { title: 'Curiosity', description: 'Ask questions and explore new possibilities.' },
+    { title: 'Creativity', description: 'Look beyond the obvious.' },
+    { title: 'Teamwork', description: 'Learn and grow together.' },
+    { title: 'Consistency', description: 'Improve through regular practice.' },
+    { title: 'Integrity', description: 'Act responsibly and fairly.' },
+    { title: 'Innovation', description: 'Turn possibilities into solutions.' }
+  ],
+  supportingLines: [
+    'Every challenge is a chance to think differently.',
+    'Every problem is an opportunity to learn.',
+    'Every idea has the potential to become something real.',
+    'NEXORA — Where thinking meets technology, and ideas become action.'
+  ]
+};
+
+export const INITIAL_TEAM: TeamMember[] = [
+  {
+    id: '1',
+    name: 'Rubeen Fathima',
+    role: 'President ',
+    department: 'Computer Science & Engineering',
+    year: '2nd Year',
+    bio: 'Passionate full-stack developer and competitive programmer with a passion for systems architecture, compiler engineering, and building resilient tech communities.',
+    photoUrl: '/team/Rubeen.png',
+    asciiArt: `
+.------------------------------------.
+|  ██████╗ ██╗   ██╗██████╗          |
+|  ██╔══██╗██║   ██║██╔══██╗         |
+|  ██████╔╝██║   ██║██████╔╝         |
+|  ██╔══██╗██║   ██║██╔══██╗         |
+|  ██║  ██║╚██████╔╝██████╔╝         |
+|  ╚═╝  ╚═╝ ╚═════╝ ╚═════╝          |
+'------------------------------------'
+        .---.
+       /  .  \\
+      |  (o)  |
+      |   <   |
+       \\  -  /
+        '---'
+      /|  :  |\\
+     / |  :  | \\
+    /  |=====|  \\
+   /   |     |   \\
+  `,
+    linkedinUrl: 'https://www.linkedin.com/in/rubeen-fathima/',
+    githubUrl: 'https://github.com/rubeenfathima-codes',
+    skills: ['HTML', 'React.js', 'Nodejs', 'Python', '  C++', 'Java']
+  },
+  {
+    id: '2',
+    name: 'DHAKSH',
+    role: 'Vice President',
+    department: 'Computer Science & Engineering',
+    year: '2ndd Year',
+    bio: 'Ex Intern @ T works, Government of Telangana | Student | UI/UX evangelist dedicated to organizing impactful hackathons and fostering inclusive learning environments for student engineers.',
+    photoUrl: '/team/dhaksh.png',
+    asciiArt: `
+.------------------------------------.
+|  ██████╗  █████╗ ██╗  ██╗          |
+|  ██╔══██╗██╔══██╗╚██╗██╔╝          |
+|  ██║  ██║███████║ ╚███╔╝           |
+|  ██║  ██║██╔══██║ ██╔██╗           |
+|  ██████╔╝██║  ██║██╔╝ ██╗          |
+|  ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝          |
+'------------------------------------'
+        _--""--_
+      /  .----.  \\
+     |  /  ||  \\  |
+     | |  [||]  | |
+     |  \\  ''  /  |
+      \\  '----'  /
+       '--....--'
+     /|    ||    |\\
+    / |    ||    | \\
+   /  |====||====|  \\
+  /   |    ||    |   \\
+
+  `,
+    linkedinUrl: 'https://www.linkedin.com/in/dhaksh-m/',
+    githubUrl: 'https://github.com/dhaksh-m',
+    skills: ['Python', 'PyTorch', 'Figma', 'React', 'UI/UX Design', 'Hackathon Organization', ]
+  },
+  {
+    id: '3',
+    name: 'Vmshi',
+    role: 'Media Lead',
+    department: 'Computer Science & Engineering',
+    year: '2nd Year',
+    bio: 'Backend specialist and Linux enthusiast. Enjoys deep diving into database indexing, microservices, and leading NEXORA debugging bootcamps.',
+    photoUrl: '/team/vamshi.png',
+    asciiArt: `
+ .------------------------------------.
+|  ██╗   ██╗ █████╗ ███╗   ███╗      |
+|  ██║   ██║██╔══██╗████╗ ████║      |
+|  ██║   ██║███████║██╔████╔██║      |
+|  ╚██╗ ██╔╝██╔══██║██║╚██╔╝██║      |
+|   ╚████╔╝ ██║  ██║██║ ╚═╝ ██║      |
+|    ╚═══╝  ╚═╝  ╚═╝╚═╝     ╚═╝      |
+'------------------------------------'
+       ______
+      /  __  \\
+     |  (  )  |
+     |   ||   |
+      \\  --  /
+       '----'
+      /| || |\\
+     / | || | \\
+    /  |====|  \\
+   /   |    |   \\
+  `,
+    linkedinUrl: 'https://linkedin.com/in/vamshi-kumar',
+    githubUrl: 'https://github.com/vamshi -nexora',
+    skills: ['Node.js', 'PostgreSQL', 'Docker', 'Kubernetes', 'C++']
+  },
+  {
+    id: '4',
+    name: 'Hansitha',
+    role: 'Creative Director & Webmaster',
+    department: 'Computer Science & Engineering',
+    year: '2nd Year',
+    bio: 'Frontend craftsman specializing in interactive canvas graphics, motion design, and developer relations. Leads branding and digital assets for NEXORA.',
+    photoUrl: '/team/hansitha.png',
+    asciiArt: `
+.------------------------------------.
+|  ██╗  ██╗ █████╗ ███╗   ██╗        |
+|  ██║  ██║██╔══██╗████╗  ██║        |
+|  ███████║███████║██╔██╗ ██║        |
+|  ██╔══██║██╔══██║██║╚██╗██║        |
+|  ██║  ██║██║  ██║██║ ╚████║        |
+|  ╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═══╝        |
+'------------------------------------'
+        .-""""-.
+       /  .::.  \\
+      |  (o  o)  |
+      |    ||    |
+       \\  '--'  /
+        '-....-'
+       /|   ||   |\\
+      / |   ||   | \\
+     /  |========|  \\
+    /   |        |   \\
+  `,
+    linkedinUrl: 'https://linkedin.com/in/hansitha-deshmukh',
+    githubUrl: 'https://github.com/hansitha-nexora',
+    skills: ['Three.js', 'TailwindCSS', 'TypeScript', 'GLSL', 'UI/UX']
+  },
+{
+    id: '5',
+    name: 'Shailaja',
+    role: 'Creative Director & Webmaster',
+    department: 'Computer Science & Engineering',
+    year: '2nd Year',
+    bio: 'Frontend craftsman specializing in interactive canvas graphics, motion design, and developer relations. Leads branding and digital assets for NEXORA.',
+    photoUrl: '/team/shailaja.png',
+    asciiArt: `
+.------------------------------------.
+|  ███████╗██╗  ██╗ █████╗           |
+|  ██╔════╝██║  ██║██╔══██╗          |
+|  ███████╗███████║███████║          |
+|  ╚════██║██╔══██║██╔══██║          |
+|  ███████║██║  ██║██║  ██║          |
+|  ╚══════╝╚═╝  ╚═╝╚═╝  ╚═╝          |
+'------------------------------------'
+        .-""""-.
+       /  .::.  \\
+      |  (o  o)  |
+      |    ||    |
+       \\  '--'  /
+        '-....-'
+       /|   ||   |\\
+      / |   ||   | \\
+     /  |========|  \\
+    /   |        |   \\
+  `,
+    linkedinUrl: 'https://linkedin.com/in/shailaja-deshmukh',
+    githubUrl: 'https://github.com/shailaja-nexora',
+    skills: ['Three.js', 'TailwindCSS', 'TypeScript', 'GLSL', 'UI/UX']
+  }
+
+
+  
+];
+
+export const UNCONFIRMED_EVENT: EventItem = {
+  id: 'construction-01',
+  title: 'NEXORA INAUGURAL HACKATHON 2026',
+  description: 'Official dates, speaker lineup, track themes, and prize pool schedule are currently under internal club review.',
+  date: 'TBA - Spring 2026',
+  time: 'TBA',
+  venue: 'Main Auditorium / Online Portal',
+  isConfirmed: false,
+  category: 'Hackathon'
+};

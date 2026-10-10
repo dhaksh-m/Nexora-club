@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #05060B;
+  --surface: #0C1020;
+  --surface-soft: #11162A;
+  --text: #F7F8FF;
+  --text-muted: #A7AEC5;
+  --purple: #8B35FF;
+  --violet: #C15BFF;
+  --electric-blue: #168BFF;
+  --cyan: #55D8FF;
+  --border: rgba(153, 139, 255, 0.22);
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: var(--font-inter), sans-serif;
+  overflow-x: hidden;
+  selection-background-color: #8B35FF;
+  selection-color: #FFFFFF;
+}
+
+/* Custom Webkit Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #05060B;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1C223A;
+  border-radius: 4px;
+  border: 1px solid rgba(139, 53, 255, 0.3);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #8B35FF;
+}
+
+/* ThreeUI Glow Utilities */
+.glow-purple-text {
+  text-shadow: 0 0 15px rgba(139, 53, 255, 0.7);
+}
+
+.glow-cyan-text {
+  text-shadow: 0 0 15px rgba(85, 216, 255, 0.7);
+}
+
+.glass-panel {
+  background: rgba(12, 16, 32, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(153, 139, 255, 0.22);
+}
