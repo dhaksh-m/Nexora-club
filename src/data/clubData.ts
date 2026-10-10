@@ -222,8 +222,8 @@ export const INITIAL_TEAM: TeamMember[] = [
      /  |========|  \\
     /   |        |   \\
   `,
-    linkedinUrl: 'https://linkedin.com/in/hansitha-deshmukh',
-    githubUrl: 'https://github.com/hansitha-nexora',
+    linkedinUrl: 'https://www.linkedin.com/in/hansitha-gangapuram-75aa8a435/',
+    githubUrl: 'https://github.com/HansithaGangapuram',
     skills: ['Three.js', 'TailwindCSS', 'TypeScript', 'GLSL', 'UI/UX']
   },
 {

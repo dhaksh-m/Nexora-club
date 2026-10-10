@@ -77,7 +77,11 @@ export const HeroSection: React.FC = () => {
 
         {/* Introductory Subcopy */}
         <p className="text-sm sm:text-base text-text-muted font-sans max-w-2xl leading-relaxed">
-          The official computer science & engineering student hub for competitive coders, hackathon builders, systems architects, and technical innovators.
+          The official computer science & engineering student hub for competitive coders, hackathon builders, systems architects, and technical innovators @ SREE DATTHA .
+        </p>
+
+                <p className="text-sm sm:text-base text-text-muted font-sans max-w-2xl leading-relaxed">
+          @ SREE DATTHA INSTUITE ENGINEERING & SCIENCE, UNDER THE DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING.
         </p>
 
         {/* Action CTAs */}
