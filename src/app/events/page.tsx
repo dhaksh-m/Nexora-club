@@ -1,6 +1,6 @@
 'use client';
 
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { NEXORA_IDEATHON_EVENT } from '@/data/clubData';
 import {
@@ -10,18 +10,53 @@ import {
   Sparkles,
   ArrowRight,
   ShieldAlert,
-  CheckCircle2,
   AlertCircle,
   ExternalLink,
-  Layers,
   Terminal,
-  Clock,
-  Compass,
-  FileText
+  Clock
 } from 'lucide-react';
 
 export default function EventsPage() {
   const event = NEXORA_IDEATHON_EVENT;
+
+  // Countdown State to 27th Oct
+  const [mounted, setMounted] = useState(false);
+  const [timeLeft, setTimeLeft] = useState<{
+    days: number;
+    hours: number;
+    minutes: number;
+    seconds: number;
+  }>({
+    days: 15,
+    hours: 0,
+    minutes: 0,
+    seconds: 0
+  });
+
+  useEffect(() => {
+    setMounted(true);
+
+    const calculateCountdown = () => {
+      // Target: 27th October 2026 09:00 AM IST
+      const targetDate = new Date('2026-10-27T09:00:00+05:30').getTime();
+      const now = new Date().getTime();
+      const difference = targetDate - now;
+
+      if (difference > 0) {
+        const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+        setTimeLeft({ days, hours, minutes, seconds });
+      } else {
+        setTimeLeft({ days: 0, hours: 0, minutes: 0, seconds: 0 });
+      }
+    };
+
+    calculateCountdown();
+    const interval = setInterval(calculateCountdown, 1000);
+    return () => clearInterval(interval);
+  }, []);
 
   return (
     <div className="pt-28 pb-24 px-4 max-w-5xl mx-auto space-y-16">
@@ -109,6 +144,67 @@ export default function EventsPage() {
             </div>
           </div>
         </div>
+      </div>
+
+      {/* Countdown to 27th Oct Section (Directly Above Guidelines) */}
+      <div className="relative p-6 sm:p-8 rounded-3xl bg-surface/90 border-2 border-purple/50 backdrop-blur-xl shadow-glow-purple/25 overflow-hidden text-center space-y-6">
+        <div className="flex flex-col sm:flex-row items-center justify-between gap-3 border-b border-white/10 pb-4">
+          <div className="flex items-center gap-2 text-xs font-mono text-cyan uppercase tracking-widest">
+            <Clock className="w-4 h-4 text-cyan animate-pulse" />
+            <span>COUNTDOWN TO 27TH OCT</span>
+          </div>
+          <div className="flex items-center gap-2 text-xs font-mono text-text-muted">
+            <span className="w-2 h-2 rounded-full bg-emerald-400 animate-ping" />
+            <span>NEXORA IDEATHON LAUNCH CLOCK</span>
+          </div>
+        </div>
+
+        {/* Countdown Timer Blocks with Primary Focus on Days */}
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 max-w-2xl mx-auto">
+          {/* Days Block */}
+          <div className="p-4 sm:p-6 rounded-2xl bg-gradient-to-b from-purple/30 to-surface-soft border-2 border-purple text-center space-y-1 shadow-glow-purple">
+            <div className="text-4xl sm:text-6xl font-display font-black text-white tracking-tight drop-shadow-[0_0_20px_rgba(139,53,255,0.8)]">
+              {mounted ? String(timeLeft.days).padStart(2, '0') : '15'}
+            </div>
+            <div className="text-xs font-mono font-bold text-cyan uppercase tracking-widest">
+              DAYS LEFT
+            </div>
+          </div>
+
+          {/* Hours Block */}
+          <div className="p-4 sm:p-6 rounded-2xl bg-surface-soft border border-white/10 text-center space-y-1">
+            <div className="text-3xl sm:text-5xl font-display font-bold text-white tracking-tight">
+              {mounted ? String(timeLeft.hours).padStart(2, '0') : '00'}
+            </div>
+            <div className="text-xs font-mono text-text-muted uppercase tracking-widest">
+              HOURS
+            </div>
+          </div>
+
+          {/* Minutes Block */}
+          <div className="p-4 sm:p-6 rounded-2xl bg-surface-soft border border-white/10 text-center space-y-1">
+            <div className="text-3xl sm:text-5xl font-display font-bold text-white tracking-tight">
+              {mounted ? String(timeLeft.minutes).padStart(2, '0') : '00'}
+            </div>
+            <div className="text-xs font-mono text-text-muted uppercase tracking-widest">
+              MINUTES
+            </div>
+          </div>
+
+          {/* Seconds Block */}
+          <div className="p-4 sm:p-6 rounded-2xl bg-surface-soft border border-white/10 text-center space-y-1">
+            <div className="text-3xl sm:text-5xl font-display font-bold text-cyan tracking-tight">
+              {mounted ? String(timeLeft.seconds).padStart(2, '0') : '00'}
+            </div>
+            <div className="text-xs font-mono text-text-muted uppercase tracking-widest">
+              SECONDS
+            </div>
+          </div>
+        </div>
+
+        <p className="text-xs font-mono text-text-muted">
+          EVENT DATE: <span className="text-white font-bold">27TH OCTOBER 2026</span> • ASSEMBLE YOUR TEAM & REGISTER BEFORE SLOTS CLOSE
+        </p>
       </div>
 
       {/* Guidelines & Important Regulations Section */}
