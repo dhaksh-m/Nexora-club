@@ -12,7 +12,8 @@ import {
   Terminal,
   ArrowRight,
   Sparkles,
-  Users
+  Users,
+  Calendar
 } from 'lucide-react';
 
 export default function HomePage() {
@@ -23,7 +24,33 @@ export default function HomePage() {
       {/* 1. Cinematic Video Hero */}
       <HeroSection />
 
-      {/* 2. Short Club Introduction */}
+      {/* 2. Featured Event Announcement: Nexora Ideathon */}
+      <section className="max-w-5xl mx-auto px-4 -mt-8">
+        <div className="p-8 sm:p-10 rounded-3xl bg-gradient-to-r from-[#0C1020] via-[#141A36] to-[#0C1020] border-2 border-purple/50 shadow-glow-purple/20 relative overflow-hidden flex flex-col md:flex-row items-center justify-between gap-6 group hover:border-purple transition-all duration-300">
+          <div className="space-y-3 text-left max-w-xl">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan/15 border border-cyan/40 text-cyan text-xs font-mono font-bold uppercase">
+              <Calendar className="w-3.5 h-3.5" />
+              <span>UPCOMING EVENT // 27TH OCT</span>
+            </div>
+            <h3 className="text-3xl sm:text-4xl font-display font-black text-white">
+              NEXORA IDEATHON
+            </h3>
+            <p className="text-xs sm:text-sm text-text-muted font-sans leading-relaxed">
+              Theme: Solve real-life problems faced by students & make existing systems easier. Entry fee is just <strong className="text-cyan font-bold">RS 50/-</strong> per team (1 to 5 members).
+            </p>
+          </div>
+
+          <Link
+            href="/events"
+            className="px-8 py-4 rounded-full bg-gradient-to-r from-purple via-violet to-electric-blue text-white font-mono font-bold text-xs tracking-wider uppercase shadow-glow-purple hover:scale-105 transition-all flex items-center gap-2 shrink-0"
+          >
+            <span>VIEW EVENT & REGISTER</span>
+            <ArrowRight className="w-4 h-4" />
+          </Link>
+        </div>
+      </section>
+
+      {/* 3. Short Club Introduction */}
       <section className="max-w-5xl mx-auto px-4">
         <div className="p-8 sm:p-12 rounded-3xl bg-surface/70 border border-purple/30 backdrop-blur-xl relative overflow-hidden shadow-2xl">
           <div className="absolute top-0 right-0 w-80 h-80 bg-purple/10 rounded-full blur-[90px] pointer-events-none" />
@@ -59,7 +86,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 3. Core Pillars: THINK / SOLVE / BUILD */}
+      {/* 4. Core Pillars: THINK / SOLVE / BUILD */}
       <section className="max-w-6xl mx-auto px-4 space-y-12">
         <div className="text-center space-y-3 max-w-2xl mx-auto">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-surface border border-purple/40 text-purple text-xs font-mono uppercase tracking-widest">
@@ -119,7 +146,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 4. Real Activities & Initiatives Preview */}
+      {/* 5. Real Activities & Initiatives Preview */}
       <section className="max-w-6xl mx-auto px-4 space-y-10">
         <div className="flex flex-col sm:flex-row items-start sm:items-end justify-between border-b border-white/10 pb-6 gap-4">
           <div>
@@ -157,7 +184,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 5. Team Teaser Section */}
+      {/* 6. Team Teaser Section */}
       <section className="max-w-6xl mx-auto px-4 space-y-10">
         <div className="text-center space-y-3">
           <span className="text-xs font-mono text-purple uppercase tracking-widest block">
@@ -205,7 +232,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 6. Closing Invitation / Spirit */}
+      {/* 7. Closing Invitation / Spirit */}
       <section className="max-w-4xl mx-auto px-4 text-center space-y-6 pt-10">
         <div className="p-10 rounded-3xl bg-gradient-to-b from-surface via-surface-soft to-bg border border-border-glow shadow-glow-purple">
           <h2 className="text-3xl sm:text-5xl font-display font-black text-white mb-4">

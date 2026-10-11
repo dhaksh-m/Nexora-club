@@ -263,13 +263,59 @@ export const INITIAL_TEAM: TeamMember[] = [
   
 ];
 
+export const NEXORA_IDEATHON_EVENT = {
+  id: 'nexora-ideathon-2026',
+  title: 'NEXORA IDEATHON',
+  date: '27th Oct',
+  fee: 'RS 50/-',
+  registrationUrl: 'https://rzp.io/rzp/nexora2026',
+  theme: {
+    title: 'Student Life & System Simplification',
+    description: 'Solve real life problems faced by the students and make an existing system easier.'
+  },
+  teamSize: '1, 2, 3, 4, or 5 Members (Max 5 people per team)',
+  waitingMessage: 'We are waiting to see your innovative ideas to solve the IRL problems',
+  organizedBy: 'Organised by Nexora team, under the department of computer science and engineering',
+  guidelines: [
+    {
+      title: 'Team Formation (1 - 5 Members)',
+      description: 'Teams can consist of 1, 2, 3, 4, or 5 members. The maximum allowed team size is strictly 5 members per team.'
+    },
+    {
+      title: 'Affordable Entry Fee',
+      description: 'Registration fee is just RS 50/- per team.'
+    },
+    {
+      title: 'Strict No-Refund Policy',
+      description: 'Please note that there is NO REFUND of the registration fee under any circumstances once registered.'
+    },
+    {
+      title: 'Accurate Information Required',
+      description: 'Ensure that you fill out all personal, contact (phone & email), and team details correctly and completely while registering on the portal.'
+    },
+    {
+      title: 'Single Focused Theme',
+      description: 'Your proposed solution must strictly target real-life problems encountered by students or improve and simplify an existing process/system.'
+    },
+    {
+      title: 'Presentation & Deliverables',
+      description: 'Teams should prepare a clear presentation or conceptual prototype explaining the problem statement, proposed approach, feasibility, and impact.'
+    },
+    {
+      title: 'Originality & Integrity',
+      description: 'All submitted ideas must be original concepts created by the participating team. Plagiarism will lead to immediate disqualification.'
+    }
+  ]
+};
+
 export const UNCONFIRMED_EVENT: EventItem = {
   id: 'construction-01',
-  title: 'NEXORA INAUGURAL HACKATHON 2026',
-  description: 'Official dates, speaker lineup, track themes, and prize pool schedule are currently under internal club review.',
-  date: 'TBA - Spring 2026',
-  time: 'TBA',
-  venue: 'Main Auditorium / Online Portal',
-  isConfirmed: false,
+  title: 'NEXORA IDEATHON 2026',
+  description: 'Solve real life problems faced by the students and make an existing system easier.',
+  date: '27th Oct',
+  time: '9:00 AM Onwards',
+  venue: 'Campus Tech Hub / Online',
+  isConfirmed: true,
+  registrationUrl: 'https://rzp.io/rzp/nexora2026',
   category: 'Hackathon'
 };

@@ -1,66 +1,225 @@
 'use client';
 
-import React, { useState } from 'react';
-import { NintendoCRT } from '@/components/crt/NintendoCRT';
-import { UNCONFIRMED_EVENT } from '@/data/clubData';
-import { Calendar, Terminal } from 'lucide-react';
+import React from 'react';
+import Link from 'next/link';
+import { NEXORA_IDEATHON_EVENT } from '@/data/clubData';
+import {
+  Calendar,
+  Users,
+  Lightbulb,
+  Sparkles,
+  ArrowRight,
+  ShieldAlert,
+  CheckCircle2,
+  AlertCircle,
+  ExternalLink,
+  Layers,
+  Terminal,
+  Clock,
+  Compass,
+  FileText
+} from 'lucide-react';
 
 export default function EventsPage() {
-  const [eventConfirmed] = useState(UNCONFIRMED_EVENT.isConfirmed);
+  const event = NEXORA_IDEATHON_EVENT;
 
   return (
-    <div className="pt-28 pb-20 px-4 max-w-6xl mx-auto space-y-16">
+    <div className="pt-28 pb-24 px-4 max-w-5xl mx-auto space-y-16">
       
-      {/* Header */}
-      <div className="text-center space-y-4 max-w-3xl mx-auto">
-        <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-surface border border-purple/40 text-purple text-xs font-mono font-semibold uppercase tracking-widest">
-          <Terminal className="w-3.5 h-3.5 text-cyan" />
-          <span>EVENTS PORTAL // CALENDAR CONTROL</span>
+      {/* Top Breadcrumb & Status Pill */}
+      <div className="text-center space-y-4">
+        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-purple/15 border border-purple/40 text-purple text-xs font-mono font-semibold uppercase tracking-widest shadow-glow-purple">
+          <Terminal className="w-3.5 h-3.5 text-cyan animate-pulse" />
+          <span>OFFICIAL EVENT PORTAL // OCTOBER 2026</span>
+          <span className="w-1.5 h-1.5 rounded-full bg-cyan" />
+          <span className="text-cyan">REGISTRATIONS OPEN</span>
         </div>
-        <h1 className="text-4xl sm:text-6xl font-display font-black text-white tracking-tight">
-          NEXORA <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple via-violet to-cyan">EVENTS</span>
+
+        {/* Event Main Heading */}
+        <h1 className="text-4xl sm:text-6xl md:text-7xl font-display font-black text-white tracking-tight">
+          NEXORA <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple via-violet to-cyan">IDEATHON</span>
         </h1>
-        <p className="text-text-muted font-sans text-sm sm:text-base leading-relaxed">
-          Technical hackathons, speed coding contests, debugging battles, and expert learning sessions.
-        </p>
+
+        {/* Date & Fee Highlights Bar */}
+        <div className="flex flex-wrap items-center justify-center gap-3 pt-2">
+          {/* Date Badge */}
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-surface border border-purple/40 text-white font-mono text-sm font-bold shadow-md">
+            <Calendar className="w-4 h-4 text-cyan" />
+            <span>DATE: {event.date}</span>
+          </div>
+
+          {/* Registration Fee Highlight Banner */}
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-gradient-to-r from-purple/30 to-violet/30 border border-purple text-white font-mono text-sm font-bold shadow-glow-purple">
+            <span className="text-yellow-400 font-extrabold text-base">★</span>
+            <span>REGISTRATION FEE: <strong className="text-cyan text-base">{event.fee}</strong></span>
+          </div>
+
+          {/* Team Size Badge */}
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-surface border border-white/10 text-text-muted font-mono text-xs">
+            <Users className="w-4 h-4 text-violet" />
+            <span>1 TO 5 MEMBERS PER TEAM</span>
+          </div>
+        </div>
       </div>
 
-      {/* Primary Temporary CRT State */}
-      {!eventConfirmed ? (
-        <div className="space-y-8">
-          <NintendoCRT
-            title="EVENTS UNDER CONSTRUCTION"
-            subtitle="TEMPORARY STATE // AWAITING EXECUTIVE CONFIRMATION"
-            codeMessage="STATUS_LOG: 0x8849F2 ... HACKATHON SPECS & SPEAKER DATES UNDER INSTRUCTION"
-            statusBadge="STAGE 01 // UNDER CONSTRUCTION"
-            pageType="events"
-          />
-        </div>
-      ) : (
-        /* Confirmed Event Display State */
-        <div className="max-w-4xl mx-auto p-8 rounded-3xl bg-surface border border-purple/40 space-y-6">
-          <div className="flex items-center gap-2 text-xs font-mono text-cyan">
-            <Calendar className="w-4 h-4" />
-            <span>CONFIRMED EVENT</span>
+      {/* Primary Highlight Card: Single Core Theme */}
+      <div className="relative p-8 sm:p-10 rounded-3xl bg-surface/80 border border-purple/40 backdrop-blur-xl shadow-glow-purple/20 overflow-hidden">
+        {/* Glow backdrop */}
+        <div className="absolute -right-10 -bottom-10 w-80 h-80 bg-purple/15 rounded-full blur-[90px] pointer-events-none" />
+        <div className="absolute -left-10 -top-10 w-80 h-80 bg-cyan/10 rounded-full blur-[90px] pointer-events-none" />
+
+        <div className="relative z-10 space-y-6">
+          <div className="flex items-center gap-2.5 text-xs font-mono text-cyan tracking-widest uppercase">
+            <Lightbulb className="w-4 h-4 text-yellow-400" />
+            <span>EXCLUSIVE CENTRAL THEME</span>
           </div>
-          <h2 className="text-3xl font-display font-bold text-white">{UNCONFIRMED_EVENT.title}</h2>
-          <p className="text-text-muted text-sm leading-relaxed">{UNCONFIRMED_EVENT.description}</p>
-          <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 font-mono text-xs text-text-primary pt-4 border-t border-white/10">
-            <div>
-              <span className="text-text-muted block text-[10px]">DATE</span>
-              <span>{UNCONFIRMED_EVENT.date}</span>
+
+          <div className="space-y-3">
+            <h2 className="text-2xl sm:text-4xl font-display font-extrabold text-white leading-tight">
+              Solve real-life problems faced by students & make an existing system easier.
+            </h2>
+            <p className="text-text-muted text-sm sm:text-base font-sans leading-relaxed">
+              The Nexora Ideathon has <strong>only one core mission</strong>: to discover creative, practical, and technology-driven ideas that alleviate student challenges, enhance daily academic workflows, or simplify any existing system to be more intuitive, efficient, and accessible.
+            </p>
+          </div>
+
+          {/* Key Event Quick Stats */}
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-4 border-t border-white/10 text-xs font-mono">
+            <div className="p-3.5 rounded-xl bg-surface-soft/80 border border-white/5 space-y-1">
+              <span className="text-text-muted block text-[10px] uppercase">EVENT DATE</span>
+              <span className="text-white font-bold text-sm flex items-center gap-1.5">
+                <Calendar className="w-3.5 h-3.5 text-cyan" />
+                {event.date}
+              </span>
             </div>
-            <div>
-              <span className="text-text-muted block text-[10px]">VENUE</span>
-              <span>{UNCONFIRMED_EVENT.venue}</span>
+
+            <div className="p-3.5 rounded-xl bg-purple/10 border border-purple/30 space-y-1">
+              <span className="text-purple block text-[10px] uppercase font-bold">ENTRY FEE</span>
+              <span className="text-cyan font-bold text-base">
+                {event.fee} <span className="text-text-muted text-xs font-normal">(Per Team)</span>
+              </span>
             </div>
-            <div>
-              <span className="text-text-muted block text-[10px]">CATEGORY</span>
-              <span>{UNCONFIRMED_EVENT.category}</span>
+
+            <div className="p-3.5 rounded-xl bg-surface-soft/80 border border-white/5 space-y-1">
+              <span className="text-text-muted block text-[10px] uppercase">TEAM COMPOSITION</span>
+              <span className="text-white font-bold text-sm flex items-center gap-1.5">
+                <Users className="w-3.5 h-3.5 text-violet" />
+                1, 2, 3, 4, or 5 (Max 5)
+              </span>
             </div>
           </div>
         </div>
-      )}
+      </div>
+
+      {/* Guidelines & Important Regulations Section */}
+      <div className="space-y-8">
+        <div className="text-center space-y-2">
+          <span className="text-xs font-mono text-cyan uppercase tracking-widest block">
+            /// CODE & PROTOCOL
+          </span>
+          <h2 className="text-3xl sm:text-4xl font-display font-bold text-white tracking-tight">
+            EVENT GUIDELINES
+          </h2>
+          <p className="text-text-muted text-xs sm:text-sm font-sans max-w-xl mx-auto">
+            Please review the following instructions and policies before proceeding to registration.
+          </p>
+        </div>
+
+        {/* Important Warning Notice Box */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          {/* No Refund Warning Box */}
+          <div className="p-5 rounded-2xl bg-red-950/20 border border-red-500/40 text-red-200 flex items-start gap-3.5">
+            <ShieldAlert className="w-5 h-5 text-red-400 shrink-0 mt-0.5" />
+            <div className="space-y-1">
+              <h3 className="font-mono text-xs font-bold text-red-400 uppercase tracking-wide">
+                No Refund Policy
+              </h3>
+              <p className="text-xs text-red-300/80 leading-relaxed font-sans">
+                There is <strong>strictly NO REFUND</strong> of the registration fee under any circumstances once the fee is submitted.
+              </p>
+            </div>
+          </div>
+
+          {/* Form Accuracy Notice Box */}
+          <div className="p-5 rounded-2xl bg-amber-950/20 border border-amber-500/40 text-amber-200 flex items-start gap-3.5">
+            <AlertCircle className="w-5 h-5 text-amber-400 shrink-0 mt-0.5" />
+            <div className="space-y-1">
+              <h3 className="font-mono text-xs font-bold text-amber-400 uppercase tracking-wide">
+                Accurate Details Required
+              </h3>
+              <p className="text-xs text-amber-300/80 leading-relaxed font-sans">
+                Please make sure to <strong>fill out all details correctly</strong> (Team Lead contact, email, and member names) while completing registration.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* Detailed Guidelines Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          {event.guidelines.map((g, idx) => (
+            <div
+              key={idx}
+              className="p-5 rounded-2xl bg-surface border border-white/10 hover:border-purple/40 transition-all duration-200 space-y-2 group"
+            >
+              <div className="flex items-center gap-2">
+                <span className="w-6 h-6 rounded-lg bg-surface-soft border border-white/10 text-cyan text-xs font-mono font-bold flex items-center justify-center">
+                  0{idx + 1}
+                </span>
+                <h3 className="text-sm font-display font-bold text-white group-hover:text-cyan transition-colors">
+                  {g.title}
+                </h3>
+              </div>
+              <p className="text-xs text-text-muted leading-relaxed font-sans pl-8">
+                {g.description}
+              </p>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* Registration CTA & Bottom Sign-off Box */}
+      <div className="p-8 sm:p-12 rounded-3xl bg-gradient-to-b from-[#0F1426] via-[#0C1020] to-[#080B14] border-2 border-purple/50 text-center space-y-8 shadow-[0_0_50px_rgba(139,53,255,0.25)] relative overflow-hidden">
+        {/* Glow Accents */}
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-96 h-32 bg-purple/20 blur-3xl pointer-events-none" />
+
+        <div className="relative z-10 space-y-4 max-w-2xl mx-auto">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-cyan/10 border border-cyan/30 text-cyan text-xs font-mono font-bold uppercase">
+            <Sparkles className="w-3.5 h-3.5" />
+            <span>OFFICIAL REGISTRATION LINK</span>
+          </div>
+
+          <h2 className="text-3xl sm:text-4xl font-display font-black text-white">
+            Ready to Build Your Solution?
+          </h2>
+
+          <p className="text-xs sm:text-sm text-text-muted font-sans leading-relaxed">
+            Registration fee is just <strong>{event.fee}</strong> per team (1 to 5 members). Ensure all team member details and contact information are entered accurately.
+          </p>
+
+          {/* Primary Registration Button */}
+          <div className="pt-4 flex flex-col items-center gap-4">
+            <a
+              href={event.registrationUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group relative inline-flex items-center gap-3 px-10 py-4 rounded-full bg-gradient-to-r from-purple via-violet to-electric-blue text-white font-mono font-bold text-base tracking-wider uppercase shadow-[0_0_35px_rgba(139,53,255,0.6)] hover:shadow-[0_0_50px_rgba(85,216,255,0.7)] hover:scale-105 transition-all duration-300"
+            >
+              <span>REGISTER FOR NEXORA IDEATHON</span>
+              <ExternalLink className="w-5 h-5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+            </a>
+
+            {/* Exact Required Prompt Below Button */}
+            <p className="text-sm sm:text-base font-display font-medium text-cyan pt-2 tracking-wide">
+              {event.waitingMessage}
+            </p>
+
+            {/* Exact Required Organization Subtext */}
+            <p className="text-xs font-mono text-text-muted uppercase tracking-widest pt-1 border-t border-white/10 w-full max-w-xl">
+              {event.organizedBy}
+            </p>
+          </div>
+        </div>
+      </div>
 
     </div>
   );
