@@ -54,9 +54,9 @@ export const HeroSection: React.FC = () => {
         </div>
 
         {/* Highlighted Department Banner */}
-        <div className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-gradient-to-r from-purple/30 via-violet/30 to-electric-blue/30 border-2 border-purple text-white text-xs sm:text-sm font-mono font-bold tracking-wider uppercase shadow-glow-purple animate-in fade-in slide-in-from-bottom-2 duration-500">
-          <span className="w-2 h-2 rounded-full bg-cyan animate-ping" />
-          <span className="text-cyan font-black tracking-wide">
+        <div className="inline-flex items-center gap-2.5 sm:gap-3 px-6 py-2.5 sm:px-8 sm:py-3.5 rounded-full bg-gradient-to-r from-purple/35 via-violet/30 to-electric-blue/35 border-2 border-purple/80 shadow-[0_0_35px_rgba(139,53,255,0.45)] backdrop-blur-md animate-in fade-in slide-in-from-bottom-2 duration-500">
+          <span className="w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-cyan animate-ping shrink-0" />
+          <span className="text-sm sm:text-base md:text-xl lg:text-2xl font-display font-extrabold tracking-wide sm:tracking-wider text-transparent bg-clip-text bg-gradient-to-r from-cyan via-white to-cyan uppercase drop-shadow-[0_2px_12px_rgba(85,216,255,0.5)]">
             DEPARTMENT OF COMPUTER SCIENCE AND ENGINEERING
           </span>
         </div>
