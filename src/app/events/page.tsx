@@ -104,14 +104,11 @@ export default function EventsPage() {
         <div className="absolute -left-10 -top-10 w-80 h-80 bg-cyan/10 rounded-full blur-[90px] pointer-events-none" />
 
         <div className="relative z-10 space-y-6">
-          <div className="flex items-center gap-2.5 text-xs font-mono text-cyan tracking-widest uppercase">
-            <Lightbulb className="w-4 h-4 text-yellow-400" />
-            <span>EXCLUSIVE CENTRAL THEME</span>
-          </div>
+          
 
           <div className="space-y-3">
             <h2 className="text-2xl sm:text-4xl font-display font-extrabold text-white leading-tight">
-              Solve real-life problems faced by students & make an existing system easier.
+              Solve real-life problems faced by students in college & make an existing system easier.
             </h2>
             <p className="text-text-muted text-sm sm:text-base font-sans leading-relaxed">
               The Nexora Ideathon has <strong>only one core mission</strong>: to discover creative, practical, and technology-driven ideas that alleviate student challenges, enhance daily academic workflows, or simplify any existing system to be more intuitive, efficient, and accessible.

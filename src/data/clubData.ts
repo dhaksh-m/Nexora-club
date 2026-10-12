@@ -164,7 +164,7 @@ export const INITIAL_TEAM: TeamMember[] = [
   },
   {
     id: '3',
-    name: 'Vmshi',
+    name: 'Vamshi',
     role: 'Media Lead',
     department: 'Computer Science & Engineering',
     year: '2nd Year',
