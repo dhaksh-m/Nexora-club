@@ -45,11 +45,11 @@ export const HeroSection: React.FC = () => {
       <div className="relative z-10 max-w-5xl mx-auto text-center flex flex-col items-center gap-6 sm:gap-7">
         
         {/* Sree Dattha Institute College Banner Logo */}
-        <div className="p-2.5 sm:p-3.5 rounded-2xl bg-white/95 backdrop-blur-md shadow-[0_0_35px_rgba(255,255,255,0.25)] border-2 border-white/80 max-w-md sm:max-w-xl mx-auto transition-transform hover:scale-[1.02] duration-300">
+        <div className="w-full max-w-xl sm:max-w-2xl md:max-w-3xl lg:max-w-4xl mx-auto px-2 transition-transform hover:scale-105 duration-300">
           <img
             src="/college-logo.png"
             alt="Sree Dattha Institute of Engineering & Science"
-            className="w-full h-auto max-h-16 sm:max-h-20 object-contain mx-auto"
+            className="w-full h-auto max-h-28 sm:max-h-36 md:max-h-44 object-contain mx-auto drop-shadow-[0_4px_20px_rgba(255,255,255,0.12)]"
           />
         </div>
 
