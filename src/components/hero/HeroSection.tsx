@@ -42,18 +42,34 @@ export const HeroSection: React.FC = () => {
       <OrbitalCanvas />
 
       {/* Hero Main Content Container */}
-      <div className="relative z-10 max-w-5xl mx-auto text-center flex flex-col items-center gap-8">
+      <div className="relative z-10 max-w-5xl mx-auto text-center flex flex-col items-center gap-6 sm:gap-7">
         
-        {/* Top Tech Label Pill */}
-        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-surface-soft/80 border border-purple/40 text-text-muted text-xs font-mono tracking-widest uppercase shadow-glow-purple/30 animate-in fade-in slide-in-from-bottom-3 duration-700">
+        {/* Sree Dattha Institute College Banner Logo */}
+        <div className="p-2.5 sm:p-3.5 rounded-2xl bg-white/95 backdrop-blur-md shadow-[0_0_35px_rgba(255,255,255,0.25)] border-2 border-white/80 max-w-md sm:max-w-xl mx-auto transition-transform hover:scale-[1.02] duration-300">
+          <img
+            src="/college-logo.png"
+            alt="Sree Dattha Institute of Engineering & Science"
+            className="w-full h-auto max-h-16 sm:max-h-20 object-contain mx-auto"
+          />
+        </div>
+
+        {/* Highlighted Department Banner */}
+        <div className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-gradient-to-r from-purple/30 via-violet/30 to-electric-blue/30 border-2 border-purple text-white text-xs sm:text-sm font-mono font-bold tracking-wider uppercase shadow-glow-purple animate-in fade-in slide-in-from-bottom-2 duration-500">
           <span className="w-2 h-2 rounded-full bg-cyan animate-ping" />
-          <span className="text-cyan font-semibold">CSE / TECHNICAL CLUB</span>
+          <span className="text-cyan font-black tracking-wide">
+            DEPARTMENT OF COMPUTER SCIENCE AND ENGINEERING
+          </span>
+        </div>
+
+        {/* Top Tech Label Pill */}
+        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-surface-soft/80 border border-purple/40 text-text-muted text-xs font-mono tracking-widest uppercase shadow-glow-purple/30">
+          <span className="text-purple font-semibold">CSE / TECHNICAL CLUB</span>
           <span className="text-white/30">•</span>
           <span>THINK → SOLVE → BUILD</span>
         </div>
 
         {/* Central Brand Wordmark with Orbital Ring Backdrop */}
-        <div className="relative my-2">
+        <div className="relative my-1">
           {/* Orbital Decorative Ring Behind Text */}
           <div className="absolute -inset-8 rounded-full border border-purple/30 animate-spin-slow pointer-events-none hidden sm:block opacity-60" />
           <div className="absolute -inset-16 rounded-full border border-electric-blue/20 animate-orbit-rotate pointer-events-none hidden sm:block opacity-40" />
@@ -77,36 +93,32 @@ export const HeroSection: React.FC = () => {
 
         {/* Introductory Subcopy */}
         <p className="text-sm sm:text-base text-text-muted font-sans max-w-2xl leading-relaxed">
-          The official computer science & engineering student hub for competitive coders, hackathon builders, systems architects, and technical innovators @ SREE DATTHA .
-        </p>
-
-                <p className="text-sm sm:text-base text-text-muted font-sans max-w-2xl leading-relaxed">
-          @ SREE DATTHA INSTUITE ENGINEERING & SCIENCE, UNDER THE DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING.
+          The official computer science & engineering technical club for competitive coders, hackathon builders, systems architects, and innovators at Sree Dattha Institute of Engineering & Science.
         </p>
 
         {/* Action CTAs */}
-        <div className="flex flex-col sm:flex-row items-center gap-4 pt-4">
+        <div className="flex flex-col sm:flex-row items-center gap-4 pt-2">
           <Link
-            href="/about"
+            href="/events"
             className="group relative px-8 py-3.5 rounded-full bg-gradient-to-r from-purple via-violet to-electric-blue text-white font-mono font-bold text-sm tracking-wider uppercase shadow-glow-purple hover:shadow-glow-blue transition-all duration-300 transform hover:-translate-y-0.5"
           >
             <span className="flex items-center gap-2">
-              <span>EXPLORE NEXORA</span>
+              <span>EXPLORE IDEATHON 2026</span>
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </span>
           </Link>
 
           <Link
-            href="/events"
+            href="/about"
             className="px-8 py-3.5 rounded-full bg-surface/80 border border-purple/40 hover:border-cyan text-text-primary hover:text-cyan font-mono font-medium text-sm tracking-wider uppercase backdrop-blur-md transition-all duration-300 flex items-center gap-2"
           >
             <Terminal className="w-4 h-4 text-cyan" />
-            <span>VIEW EVENTS</span>
+            <span>ABOUT CLUB</span>
           </Link>
         </div>
 
         {/* Core Pillars Quick Ticker */}
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 w-full max-w-3xl pt-10 border-t border-white/10 mt-6">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 w-full max-w-3xl pt-8 border-t border-white/10 mt-4">
           <div className="flex items-center gap-3 p-3 rounded-xl bg-surface/50 border border-white/5 backdrop-blur-sm hover:border-purple/30 transition-colors">
             <div className="p-2 rounded-lg bg-purple/20 text-purple border border-purple/40">
               <Code className="w-5 h-5" />

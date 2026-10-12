@@ -33,3 +33,17 @@ export interface GalleryItem {
   imageUrl: string;
   caption: string;
 }
+
+export interface RegisteredTeam {
+  id: string;
+  teamName: string;
+  leadName: string;
+  memberCount: number;
+  members?: string[];
+  department: string;
+  year: string;
+  paymentId: string;
+  amount: string;
+  registeredAt: string;
+  status: 'Confirmed' | 'Verified';
+}

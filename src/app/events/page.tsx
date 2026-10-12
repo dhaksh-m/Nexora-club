@@ -16,6 +16,8 @@ import {
   Clock
 } from 'lucide-react';
 
+import { RegisteredTeamsDashboard } from '@/components/events/RegisteredTeamsDashboard';
+
 export default function EventsPage() {
   const event = NEXORA_IDEATHON_EVENT;
 
@@ -313,6 +315,9 @@ export default function EventsPage() {
           </div>
         </div>
       </div>
+
+      {/* Live Registered Teams Dashboard from Razorpay */}
+      <RegisteredTeamsDashboard />
 
     </div>
   );
