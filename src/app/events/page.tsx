@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { NEXORA_IDEATHON_EVENT } from '@/data/clubData';
+import { RAZORPAY_REGISTERED_TEAMS } from '@/data/registeredTeams';
 import {
   Calendar,
   Users,
@@ -13,13 +14,15 @@ import {
   AlertCircle,
   ExternalLink,
   Terminal,
-  Clock
+  Clock,
+  CheckCircle2,
+  Trophy
 } from 'lucide-react';
 
 export default function EventsPage() {
   const event = NEXORA_IDEATHON_EVENT;
 
-  // Countdown State to 27th Oct
+  // Countdown State to 29th Oct
   const [mounted, setMounted] = useState(false);
   const [timeLeft, setTimeLeft] = useState<{
     days: number;
@@ -37,8 +40,8 @@ export default function EventsPage() {
     setMounted(true);
 
     const calculateCountdown = () => {
-      // Target: 27th October 2026 09:00 AM IST
-      const targetDate = new Date('2026-10-27T09:00:00+05:30').getTime();
+      // Target: 29th October 2026 09:00 AM IST
+      const targetDate = new Date('2026-10-29T09:00:00+05:30').getTime();
       const now = new Date().getTime();
       const difference = targetDate - now;
 
@@ -107,8 +110,12 @@ export default function EventsPage() {
           
 
           <div className="space-y-3">
+            <h1 className="text-2xl sm:text-4xl font-display font-extrabold text-white leading-tight">
+              PROBLEM STATEMENT: 
+            </h1>
+
             <h2 className="text-2xl sm:text-4xl font-display font-extrabold text-white leading-tight">
-              Solve real-life problems faced by students in college & make an existing system easier.
+              Solve real life problems faced by students in college or make an existing system easier.
             </h2>
             <p className="text-text-muted text-sm sm:text-base font-sans leading-relaxed">
               The Nexora Ideathon has <strong>only one core mission</strong>: to discover creative, practical, and technology-driven ideas that alleviate student challenges, enhance daily academic workflows, or simplify any existing system to be more intuitive, efficient, and accessible.
@@ -143,12 +150,12 @@ export default function EventsPage() {
         </div>
       </div>
 
-      {/* Countdown to 27th Oct Section (Directly Above Guidelines) */}
+      {/* Countdown to 29th Oct Section (Directly Above Guidelines) */}
       <div className="relative p-6 sm:p-8 rounded-3xl bg-surface/90 border-2 border-purple/50 backdrop-blur-xl shadow-glow-purple/25 overflow-hidden text-center space-y-6">
         <div className="flex flex-col sm:flex-row items-center justify-between gap-3 border-b border-white/10 pb-4">
           <div className="flex items-center gap-2 text-xs font-mono text-cyan uppercase tracking-widest">
             <Clock className="w-4 h-4 text-cyan animate-pulse" />
-            <span>COUNTDOWN TO 27TH OCT</span>
+            <span>COUNTDOWN TO 29TH OCT</span>
           </div>
           <div className="flex items-center gap-2 text-xs font-mono text-text-muted">
             <span className="w-2 h-2 rounded-full bg-emerald-400 animate-ping" />
@@ -200,7 +207,7 @@ export default function EventsPage() {
         </div>
 
         <p className="text-xs font-mono text-text-muted">
-          EVENT DATE: <span className="text-white font-bold">27TH OCTOBER 2026</span> • ASSEMBLE YOUR TEAM & REGISTER BEFORE SLOTS CLOSE
+          EVENT DATE: <span className="text-white font-bold">29TH OCTOBER 2026</span> • ASSEMBLE YOUR TEAM & REGISTER BEFORE SLOTS CLOSE
         </p>
       </div>
 
@@ -313,6 +320,65 @@ export default function EventsPage() {
           </div>
         </div>
       </div>
+
+      {/* ── Registered Teams Section ── */}
+      <div className="max-w-4xl mx-auto px-4 pb-16">
+        <div className="rounded-3xl bg-surface/70 border border-purple/30 backdrop-blur-md p-6 sm:p-8 shadow-[0_0_30px_rgba(139,53,255,0.15)] space-y-6">
+
+          {/* Header */}
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+            <div className="flex items-center gap-2.5">
+              <div className="p-2 rounded-xl bg-purple/20 border border-purple/40">
+                <Trophy className="w-5 h-5 text-amber-400" />
+              </div>
+              <div>
+                <h3 className="text-lg sm:text-xl font-display font-bold text-white">Registered Teams</h3>
+                <p className="text-xs font-mono text-text-muted">NEXORA IDEATHON 2026 • Confirmed entries</p>
+              </div>
+            </div>
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-mono font-bold">
+              <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
+              {RAZORPAY_REGISTERED_TEAMS.length} Teams Confirmed
+            </div>
+          </div>
+
+          {/* Teams Grid */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+            {RAZORPAY_REGISTERED_TEAMS.map((team, index) => (
+              <div
+                key={team.id}
+                className="group flex items-center gap-3 p-3.5 rounded-2xl bg-surface/80 border border-white/8 hover:border-purple/40 hover:shadow-[0_0_15px_rgba(139,53,255,0.2)] transition-all duration-200"
+              >
+                {/* Team Number Badge */}
+                <div className="shrink-0 w-8 h-8 rounded-xl bg-gradient-to-tr from-purple/50 to-cyan/30 border border-purple/40 flex items-center justify-center text-xs font-mono font-black text-white">
+                  {index + 1}
+                </div>
+
+                {/* Team Info */}
+                <div className="min-w-0 flex-1">
+                  <p className="text-sm font-display font-bold text-white truncate group-hover:text-cyan transition-colors">
+                    {team.teamName}
+                  </p>
+                  <p className="text-[11px] font-mono text-text-muted flex items-center gap-1 mt-0.5">
+                    <Users className="w-3 h-3" />
+                    {team.memberCount} {team.memberCount === 1 ? 'member' : 'members'}
+                  </p>
+                </div>
+
+                {/* Verified tick */}
+                <CheckCircle2 className="shrink-0 w-4 h-4 text-emerald-400" />
+              </div>
+            ))}
+          </div>
+
+          {/* Footer note */}
+          <p className="text-[11px] font-mono text-text-muted text-center pt-2 border-t border-white/5">
+            List updates as payments are verified via Razorpay • Registration fee ₹50 per team
+          </p>
+
+        </div>
+      </div>
+
     </div>
   );
 }

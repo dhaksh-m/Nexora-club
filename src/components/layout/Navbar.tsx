@@ -9,6 +9,7 @@ import { Menu, X } from 'lucide-react';
 const NAV_ITEMS = [
   { name: 'Home', path: '/' },
   { name: 'About', path: '/about' },
+  { name: 'Leadership', path: '/leadership' },
   { name: 'Team', path: '/team' },
   { name: 'Events', path: '/events' },
   { name: 'Gallery', path: '/gallery' },
@@ -29,6 +30,7 @@ export const Navbar: React.FC = () => {
   }, []);
 
   const activeIndex = NAV_ITEMS.findIndex((item) => item.path === pathname);
+  const itemWidthPercent = 100 / NAV_ITEMS.length;
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 flex justify-center items-center px-4 pt-4 pb-2 pointer-events-none">
@@ -55,9 +57,9 @@ export const Navbar: React.FC = () => {
               className="absolute top-1 bottom-1 rounded-full bg-gradient-to-r from-purple/40 via-violet/40 to-electric-blue/40 border border-purple/50 shadow-glow-purple transition-all duration-300 ease-out"
               style={{
                 left: `${
-                  (hoveredIndex !== null ? hoveredIndex : activeIndex) * 20
+                  (hoveredIndex !== null ? hoveredIndex : activeIndex) * itemWidthPercent
                 }%`,
-                width: '20%',
+                width: `${itemWidthPercent}%`,
               }}
             />
           ) : null}
@@ -70,7 +72,7 @@ export const Navbar: React.FC = () => {
                 href={item.path}
                 onMouseEnter={() => setHoveredIndex(index)}
                 onFocus={() => setHoveredIndex(index)}
-                className={`relative z-10 w-24 py-1.5 text-center text-xs font-mono font-medium tracking-wider uppercase transition-colors duration-200 rounded-full outline-none focus-visible:ring-2 focus-visible:ring-purple ${
+                className={`relative z-10 w-20 lg:w-24 py-1.5 text-center text-xs font-mono font-medium tracking-wider uppercase transition-colors duration-200 rounded-full outline-none focus-visible:ring-2 focus-visible:ring-purple ${
                   isActive
                     ? 'text-white font-bold drop-shadow-[0_0_8px_rgba(255,255,255,0.8)]'
                     : 'text-text-muted hover:text-white'

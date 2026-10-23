@@ -30,7 +30,7 @@ export default function HomePage() {
           <div className="space-y-3 text-left max-w-xl">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan/15 border border-cyan/40 text-cyan text-xs font-mono font-bold uppercase">
               <Calendar className="w-3.5 h-3.5" />
-              <span>UPCOMING EVENT // 27TH OCT</span>
+              <span>UPCOMING EVENT // 29TH OCT</span>
             </div>
             <h3 className="text-3xl sm:text-4xl font-display font-black text-white">
               NEXORA IDEATHON

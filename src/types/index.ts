@@ -12,6 +12,17 @@ export interface TeamMember {
   skills: string[];
 }
 
+export interface LeadershipMember {
+  id: string;
+  name: string;
+  role: string;
+  department?: string;
+  institution: string;
+  category: string;
+  photoUrl?: string;
+  
+}
+
 export interface EventItem {
   id: string;
   title: string;
@@ -37,13 +48,8 @@ export interface GalleryItem {
 export interface RegisteredTeam {
   id: string;
   teamName: string;
-  leadName: string;
+  
   memberCount: number;
   members?: string[];
-  department: string;
-  year: string;
-  paymentId: string;
-  amount: string;
-  registeredAt: string;
-  status: 'Confirmed' | 'Verified';
+ 
 }

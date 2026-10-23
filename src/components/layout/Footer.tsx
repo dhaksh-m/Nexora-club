@@ -33,6 +33,7 @@ export const Footer: React.FC = () => {
             {[
               { name: 'Home', path: '/' },
               { name: 'About NEXORA', path: '/about' },
+              { name: 'Leadership & Patrons', path: '/leadership' },
               { name: 'Meet the Team', path: '/team' },
               { name: 'Events Portal', path: '/events' },
               { name: 'Gallery Archive', path: '/gallery' },

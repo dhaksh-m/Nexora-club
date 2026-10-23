@@ -107,8 +107,8 @@ export const AsciiPortrait: React.FC<AsciiPortraitProps> = ({
             <span className="w-2.5 h-2.5 rounded-full bg-red-500/80 inline-block" />
             <span className="w-2.5 h-2.5 rounded-full bg-yellow-500/80 inline-block" />
             <span className="w-2.5 h-2.5 rounded-full bg-green-500/80 inline-block" />
-            <span className={`ml-2 font-bold uppercase ${theme.text}`}>
-              {name.split(' ')[0]}_PORTRAIT.{viewMode === 'photo' ? 'PNG' : 'ASCII'}
+            <span className={`ml-2 font-bold uppercase text-[11px] ${theme.text}`}>
+              MEMBER PROFILE
             </span>
           </div>
 
@@ -145,11 +145,11 @@ export const AsciiPortrait: React.FC<AsciiPortraitProps> = ({
           </div>
         </div>
 
-        {/* Content Display: Uploaded PNG Photo vs ASCII Art */}
+        {/* Content Display: Uploaded Photo vs ASCII Art */}
         {viewMode === 'photo' ? (
           <div className="relative rounded-xl overflow-hidden min-h-[220px] flex flex-col items-center justify-center bg-black/60 border border-white/10 p-4">
             {photoUrl && !imgError ? (
-              /* Display actual uploaded PNG photo */
+              /* Display actual uploaded photo */
               <div className={`relative p-1 rounded-2xl bg-gradient-to-tr ${theme.gradient} shadow-2xl mb-3`}>
                 <img
                   src={photoUrl}
@@ -162,16 +162,13 @@ export const AsciiPortrait: React.FC<AsciiPortraitProps> = ({
                 />
               </div>
             ) : (
-              /* Fallback Styled Avatar if PNG image file is not yet placed in public/ */
+              /* Fallback Styled Avatar */
               <div className="flex flex-col items-center text-center py-2">
                 <div className={`w-24 h-24 rounded-full bg-gradient-to-tr ${theme.gradient} p-1 shadow-lg mb-3`}>
                   <div className="w-full h-full rounded-full bg-surface flex items-center justify-center text-3xl font-display font-black text-white">
                     {name.split(' ').map(n => n[0]).join('')}
                   </div>
                 </div>
-                <p className="text-[11px] font-mono text-text-muted uppercase">
-                  [ PNG PHOTO: <span className={theme.text}>{photoUrl}</span> ]
-                </p>
               </div>
             )}
             <p className="font-display font-bold text-white text-base mt-1">{name}</p>
@@ -181,19 +178,10 @@ export const AsciiPortrait: React.FC<AsciiPortraitProps> = ({
           /* ASCII Art Display */
           <div className={`relative font-mono text-[10px] sm:text-xs leading-[1.15] tracking-tighter overflow-x-auto whitespace-pre p-2 bg-[#04060C] rounded-xl border border-white/5 font-bold select-all min-h-[220px] flex items-center justify-center ${theme.text}`}>
             <div className="text-center font-mono">
-              <pre className="inline-block text-left">{asciiArt || `// ASCII Matrix for ${name}\n// Upload PNG to ${photoUrl}`}</pre>
+              <pre className="inline-block text-left">{asciiArt || `// ASCII Art for ${name}`}</pre>
             </div>
           </div>
         )}
-
-        {/* Footer info badge */}
-        <div className="mt-3 flex items-center justify-between text-[10px] font-mono text-text-muted pt-2 border-t border-white/5">
-          <span>MEMBER MEDIA MATRIX</span>
-          <div className="flex items-center gap-1.5">
-            <span className={`w-2 h-2 rounded-full ${theme.dot} animate-pulse`} />
-            <span className={`uppercase font-bold ${theme.text}`}>{theme.name} MATRIX</span>
-          </div>
-        </div>
 
       </div>
     </div>

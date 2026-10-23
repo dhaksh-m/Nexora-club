@@ -1,4 +1,4 @@
-import { TeamMember, EventItem } from '@/types';
+import { TeamMember, EventItem, LeadershipMember } from '@/types';
 
 export const CLUB_INFO = {
   name: 'NEXORA',
@@ -190,14 +190,14 @@ export const INITIAL_TEAM: TeamMember[] = [
     /  |====|  \\
    /   |    |   \\
   `,
-    linkedinUrl: 'https://linkedin.com/in/vamshi-kumar',
-    githubUrl: 'https://github.com/vamshi -nexora',
+    linkedinUrl: 'https://www.linkedin.com/in/r-vamshi-5a306a446?',
+    githubUrl: 'https://github.com/vamshi4924',
     skills: ['Node.js', 'PostgreSQL', 'Docker', 'Kubernetes', 'C++']
   },
   {
     id: '4',
     name: 'Hansitha',
-    role: 'Creative Director & Webmaster',
+    role: 'General Secretary',
     department: 'Computer Science & Engineering',
     year: '2nd Year',
     bio: 'Frontend craftsman specializing in interactive canvas graphics, motion design, and developer relations. Leads branding and digital assets for NEXORA.',
@@ -229,7 +229,7 @@ export const INITIAL_TEAM: TeamMember[] = [
 {
     id: '5',
     name: 'Shailaja',
-    role: 'Creative Director & Webmaster',
+    role: 'Technology Lead',
     department: 'Computer Science & Engineering',
     year: '2nd Year',
     bio: 'Frontend craftsman specializing in interactive canvas graphics, motion design, and developer relations. Leads branding and digital assets for NEXORA.',
@@ -254,8 +254,8 @@ export const INITIAL_TEAM: TeamMember[] = [
      /  |========|  \\
     /   |        |   \\
   `,
-    linkedinUrl: 'https://linkedin.com/in/shailaja-deshmukh',
-    githubUrl: 'https://github.com/shailaja-nexora',
+    linkedinUrl: 'https://www.linkedin.com/in/valapatla-shailaja-b89046445?',
+    githubUrl: 'https://github.com/shailajavalapatla',
     skills: ['Three.js', 'TailwindCSS', 'TypeScript', 'GLSL', 'UI/UX']
   }
 
@@ -263,10 +263,71 @@ export const INITIAL_TEAM: TeamMember[] = [
   
 ];
 
+export const LEADERSHIP_MEMBERS: LeadershipMember[] = [
+  {
+    id: 'chairman',
+    name: 'Sri. G. Panduranga Reddy ',
+    role: 'Chairman, SDI',
+    category: 'Chief Patron',
+    institution: 'Sree Dattha Institutions',
+    photoUrl: '/leadership/chairman.png'
+  },
+  {
+    id: 'vice-chairman',
+    name: 'Dr. G. N. V. Vibhav Reddy',
+    role: 'Vice-Chairman, SDI',
+    category: 'Patron',
+    institution: 'Sree Dattha Institutions',
+    photoUrl: '/leadership/vice-chairman.png'
+  },
+  {
+    id: 'CMD',
+    name: 'Sri. G. Devendra Vikram Reddy',
+    role: 'Chief Managing Director, SDI',
+    category: 'Patron',
+    institution: 'Sree Dattha Institutions',
+    photoUrl: '/leadership/cmd.png'
+  },
+  {
+    id: 'Technical Chair',
+    name: 'Dr. A. Srinivasula reddy',
+    role: 'Professor in EEE & PRINCIPAL, SDES',
+    category: 'Technical Chair',
+    institution: 'Sree Dattha Institute of Engineering & Science (Autonomous)',
+    photoUrl: '/leadership/technical-chair.png'
+  },
+  {
+    id: 'Technical Co-Chair',
+    name: 'Dr. S. Venkata Achuta Rao',
+    role: 'Prof., Dean-Academics & Administration, SDI',
+    category: 'Technical Chair',
+    institution: 'Sree Dattha Institute of Engineering & Science (Autonomous)',
+    photoUrl: '/leadership/technical-co-chair.png'
+  },
+  {
+    id: 'HOD-CSE',
+    name: 'Dr. SK. Mahaboob Basha',
+    role: 'Professor & HOD - CSE, SDES',
+    category: 'Convener',
+    department: 'Department of Computer Science & Engineering',
+    institution: 'Sree Dattha Institute of Engineering & Science',
+    photoUrl: '/leadership/hod-cse.png'
+  },
+  {
+    id: 'faculty-coordinator',
+    name: 'Mrs. K. Mounika',
+    role: 'Assistant Professor, Dept. of CSE, SDES',
+    category: 'Coordinator',
+    department: 'Department of Computer Science & Engineering',
+    institution: 'Sree Dattha Institute of Engineering & Science',
+    photoUrl: '/leadership/coordinator.png'
+  }
+];
+
 export const NEXORA_IDEATHON_EVENT = {
   id: 'nexora-ideathon-2026',
   title: 'NEXORA IDEATHON',
-  date: '27th Oct',
+  date: '29th Oct',
   fee: 'RS 50/-',
   registrationUrl: 'https://rzp.io/rzp/nexora2026',
   theme: {
@@ -312,7 +373,7 @@ export const UNCONFIRMED_EVENT: EventItem = {
   id: 'construction-01',
   title: 'NEXORA IDEATHON 2026',
   description: 'Solve real life problems faced by the students and make an existing system easier.',
-  date: '27th Oct',
+  date: '29th Oct',
   time: '9:00 AM Onwards',
   venue: 'Campus Tech Hub / Online',
   isConfirmed: true,
