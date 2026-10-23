@@ -24,10 +24,10 @@ export const RegisteredTeamsDashboard: React.FC = () => {
 
   const filteredTeams = RAZORPAY_REGISTERED_TEAMS.filter((team) => {
     const matchesSearch =
-      team.teamName.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      team.leadName.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      team.department.toLowerCase().includes(searchTerm.toLowerCase());
-
+  team.teamName.toLowerCase().includes(searchTerm.toLowerCase()) ||
+  (team.members ?? []).some((member) =>
+    member.toLowerCase().includes(searchTerm.toLowerCase())
+  );
     const matchesSize =
       selectedSize === 'all' ||
       (selectedSize === 'solo' && team.memberCount === 1) ||
@@ -182,22 +182,14 @@ export const RegisteredTeamsDashboard: React.FC = () => {
                         </span>
                       </div>
                       <p className="text-xs font-mono text-text-muted">
-                        Lead: <span className="text-cyan font-semibold">{team.leadName}</span> • {team.department} ({team.year})
+                      {team.memberCount} registered {team.memberCount === 1 ? 'member' : 'members'}
                       </p>
                     </div>
                   </div>
 
                   {/* Payment & Status Info */}
                   <div className="flex items-center justify-between sm:justify-end gap-3 pt-2 sm:pt-0 border-t sm:border-t-0 border-white/5">
-                    <div className="text-left sm:text-right font-mono text-xs">
-                      <div className="flex items-center sm:justify-end gap-1.5 text-emerald-400 font-bold text-[11px]">
-                        <CheckCircle2 className="w-3.5 h-3.5" />
-                        <span>PAID {team.amount}</span>
-                      </div>
-                      <span className="text-[10px] text-text-muted block">
-                        TXN: {team.paymentId}
-                      </span>
-                    </div>
+                    
 
                     {/* Toggle Members Button */}
                     {team.members && team.members.length > 0 && (
@@ -216,24 +208,7 @@ export const RegisteredTeamsDashboard: React.FC = () => {
                   </div>
                 </div>
 
-                {/* Expanded Member Details */}
-                {isExpanded && team.members && (
-                  <div className="pt-3 border-t border-white/10 space-y-2 animate-in fade-in duration-200">
-                    <span className="text-[10px] font-mono text-cyan uppercase tracking-widest block">
-                      TEAM MEMBERS ROSTER:
-                    </span>
-                    <div className="flex flex-wrap gap-2">
-                      {team.members.map((member, mIdx) => (
-                        <span
-                          key={mIdx}
-                          className="px-2.5 py-1 rounded-lg bg-surface border border-white/10 text-xs font-mono text-text-primary"
-                        >
-                          👤 {member}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-                )}
+                
               </div>
             );
           })
