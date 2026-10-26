@@ -111,11 +111,18 @@ export default function EventsPage() {
 
           <div className="space-y-3">
             <h1 className="text-2xl sm:text-4xl font-display font-extrabold text-white leading-tight">
-              PROBLEM STATEMENT: 
+              PROBLEM STATEMENT 1: 
             </h1>
 
             <h2 className="text-2xl sm:text-4xl font-display font-extrabold text-white leading-tight">
               Solve real life problems faced by students in college or make an existing system easier.
+            </h2>
+            <h1 className="text-2xl sm:text-4xl font-display font-extrabold text-white leading-tight">
+              PROBLEM STATEMENT 2: 
+            </h1>
+
+            <h2 className="text-2xl sm:text-4xl font-display font-extrabold text-white leading-tight">
+              Identify a real-world problem and develop an innovative AI agent that can think, plan, make decisions, use tools, and execute tasks to deliver practical solutions.
             </h2>
             <p className="text-text-muted text-sm sm:text-base font-sans leading-relaxed">
               The Nexora Ideathon has <strong>only one core mission</strong>: to discover creative, practical, and technology-driven ideas that alleviate student challenges, enhance daily academic workflows, or simplify any existing system to be more intuitive, efficient, and accessible.
