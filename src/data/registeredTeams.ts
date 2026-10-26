@@ -96,4 +96,15 @@ export const RAZORPAY_REGISTERED_TEAMS: RegisteredTeam[] = [
     teamName: 'Edureformers',
     memberCount: 5,
   }, 
+  {
+    id: 'TEAM-020',
+    teamName: 'MDSSY',
+    memberCount: 5,
+  }, 
+  {
+    id: 'TEAM-021',
+    teamName: 'Codestorm',
+    memberCount: 5,
+  }, 
+
 ];

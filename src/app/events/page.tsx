@@ -118,6 +118,9 @@ export default function EventsPage() {
               Solve real life problems faced by students in college or make an existing system easier.
             </h2>
             <h1 className="text-2xl sm:text-4xl font-display font-extrabold text-white leading-tight">
+              -- 
+            </h1>
+            <h1 className="text-2xl sm:text-4xl font-display font-extrabold text-white leading-tight">
               PROBLEM STATEMENT 2: 
             </h1>
 
