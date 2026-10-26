@@ -308,15 +308,27 @@ export default function EventsPage() {
 
           {/* Primary Registration Button */}
           <div className="pt-4 flex flex-col items-center gap-4">
-            <a
-              href={event.registrationUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group relative inline-flex items-center gap-3 px-10 py-4 rounded-full bg-gradient-to-r from-purple via-violet to-electric-blue text-white font-mono font-bold text-base tracking-wider uppercase shadow-[0_0_35px_rgba(139,53,255,0.6)] hover:shadow-[0_0_50px_rgba(85,216,255,0.7)] hover:scale-105 transition-all duration-300"
-            >
-              <span>REGISTER FOR NEXORA IDEATHON</span>
-              <ExternalLink className="w-5 h-5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
-            </a>
+            <div className="flex flex-col items-center gap-6">
+              <a
+                href={event.registrationUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group relative inline-flex items-center gap-3 px-10 py-4 rounded-full bg-gradient-to-r from-purple via-violet to-electric-blue text-white font-mono font-bold text-base tracking-wider uppercase shadow-[0_0_35px_rgba(139,53,255,0.6)] hover:shadow-[0_0_50px_rgba(85,216,255,0.7)] hover:scale-105 transition-all duration-300"
+              >
+                <span>REGISTER FOR NEXORA IDEATHON</span>
+                <ExternalLink className="w-5 h-5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+              </a>
+
+              <a
+                href={event.whatsappCommunityUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group relative inline-flex items-center gap-3 px-10 py-4 rounded-full bg-gradient-to-r from-purple via-violet to-electric-blue text-white font-mono font-bold text-base tracking-wider uppercase shadow-[0_0_35px_rgba(139,53,255,0.6)] hover:shadow-[0_0_50px_rgba(85,216,255,0.7)] hover:scale-105 transition-all duration-300"
+              >
+                <span>JOIN WHATSAPP COMMUNITY FOR UPDATES</span>
+                <ExternalLink className="w-5 h-5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+              </a>
+            </div>
 
             {/* Exact Required Prompt Below Button */}
             <p className="text-sm sm:text-base font-display font-medium text-cyan pt-2 tracking-wide">

@@ -125,7 +125,7 @@ export const RAZORPAY_REGISTERED_TEAMS: RegisteredTeam[] = [
     id: 'TEAM-025',
     teamName: 'Alexanders',
     memberCount: 5,
-  }, 
+  },
  
 
 ];

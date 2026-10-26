@@ -330,6 +330,7 @@ export const NEXORA_IDEATHON_EVENT = {
   date: '29th Oct',
   fee: 'RS 50/-',
   registrationUrl: 'https://rzp.io/rzp/nexora2026',
+  whatsappCommunityUrl: 'https://chat.whatsapp.com/LMMCmt2dsHL6yoYq9efupu',
   theme: {
     title: 'Student Life & System Simplification',
     description: 'Solve real life problems faced by the students and make an existing system easier.'
