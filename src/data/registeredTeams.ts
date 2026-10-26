@@ -104,12 +104,12 @@ export const RAZORPAY_REGISTERED_TEAMS: RegisteredTeam[] = [
   {
     id: 'TEAM-021',
     teamName: 'Codestorm',
-    memberCount: 5,
+    memberCount: 4,
   },
    {
     id: 'TEAM-022',
     teamName: 'CODE CRAFTERS',
-    memberCount: 5,
+    memberCount: 3,
   }, 
  {
     id: 'TEAM-023',
@@ -118,7 +118,7 @@ export const RAZORPAY_REGISTERED_TEAMS: RegisteredTeam[] = [
   }, 
  {
     id: 'TEAM-024',
-    teamName: 'Maverick',
+    teamName: '1',
     memberCount: 5,
   }, 
  {
@@ -126,6 +126,10 @@ export const RAZORPAY_REGISTERED_TEAMS: RegisteredTeam[] = [
     teamName: 'Alexanders',
     memberCount: 5,
   },
- 
+  {
+    id: 'TEAM-026',
+    teamName: 'Idea Sparks',
+    memberCount: 5,
+  },
 
 ];

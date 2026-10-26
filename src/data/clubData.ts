@@ -366,6 +366,10 @@ export const NEXORA_IDEATHON_EVENT = {
     {
       title: 'Originality & Integrity',
       description: 'All submitted ideas must be original concepts created by the participating team. Plagiarism will lead to immediate disqualification.'
+    },
+    {
+      title: 'Bring Your Own Laptop',
+      description: 'Participants are required to bring their own laptops for the presentation.'
     }
   ]
 };

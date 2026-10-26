@@ -114,9 +114,9 @@ export default function EventsPage() {
               PROBLEM STATEMENT 1: 
             </h1>
 
-            <h2 className="text-2xl sm:text-4xl font-display font-extrabold text-white leading-tight">
+            <h5 className="text-2xl sm:text-4xl font-display font-extrabold text-white leading-tight">
               Solve real life problems faced by students in college or make an existing system easier.
-            </h2>
+            </h5>
             <h1 className="text-2xl sm:text-4xl font-display font-extrabold text-white leading-tight">
               -- 
             </h1>
@@ -124,9 +124,9 @@ export default function EventsPage() {
               PROBLEM STATEMENT 2: 
             </h1>
 
-            <h2 className="text-2xl sm:text-4xl font-display font-extrabold text-white leading-tight">
+            <h5 className="text-2xl sm:text-4xl font-display font-extrabold text-white leading-tight">
               Identify a real-world problem and develop an innovative AI agent that can think, plan, make decisions, use tools, and execute tasks to deliver practical solutions.
-            </h2>
+            </h5>
             <p className="text-text-muted text-sm sm:text-base font-sans leading-relaxed">
               The Nexora Ideathon has <strong>only one core mission</strong>: to discover creative, practical, and technology-driven ideas that alleviate student challenges, enhance daily academic workflows, or simplify any existing system to be more intuitive, efficient, and accessible.
             </p>
@@ -308,27 +308,15 @@ export default function EventsPage() {
 
           {/* Primary Registration Button */}
           <div className="pt-4 flex flex-col items-center gap-4">
-            <div className="flex flex-col items-center gap-6">
-              <a
-                href={event.registrationUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group relative inline-flex items-center gap-3 px-10 py-4 rounded-full bg-gradient-to-r from-purple via-violet to-electric-blue text-white font-mono font-bold text-base tracking-wider uppercase shadow-[0_0_35px_rgba(139,53,255,0.6)] hover:shadow-[0_0_50px_rgba(85,216,255,0.7)] hover:scale-105 transition-all duration-300"
-              >
-                <span>REGISTER FOR NEXORA IDEATHON</span>
-                <ExternalLink className="w-5 h-5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
-              </a>
-
-              <a
-                href={event.whatsappCommunityUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group relative inline-flex items-center gap-3 px-10 py-4 rounded-full bg-gradient-to-r from-purple via-violet to-electric-blue text-white font-mono font-bold text-base tracking-wider uppercase shadow-[0_0_35px_rgba(139,53,255,0.6)] hover:shadow-[0_0_50px_rgba(85,216,255,0.7)] hover:scale-105 transition-all duration-300"
-              >
-                <span>JOIN WHATSAPP COMMUNITY FOR UPDATES</span>
-                <ExternalLink className="w-5 h-5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
-              </a>
-            </div>
+            <a
+              href={event.registrationUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group relative inline-flex items-center gap-3 px-10 py-4 rounded-full bg-gradient-to-r from-purple via-violet to-electric-blue text-white font-mono font-bold text-base tracking-wider uppercase shadow-[0_0_35px_rgba(139,53,255,0.6)] hover:shadow-[0_0_50px_rgba(85,216,255,0.7)] hover:scale-105 transition-all duration-300"
+            >
+              <span>REGISTER FOR NEXORA IDEATHON</span>
+              <ExternalLink className="w-5 h-5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+            </a>
 
             {/* Exact Required Prompt Below Button */}
             <p className="text-sm sm:text-base font-display font-medium text-cyan pt-2 tracking-wide">
@@ -340,6 +328,29 @@ export default function EventsPage() {
               {event.organizedBy}
             </p>
           </div>
+        </div>
+      </div>
+
+      {/* WhatsApp Community CTA */}
+      <div className="p-8 sm:p-12 rounded-3xl bg-gradient-to-b from-[#0F1426] via-[#0C1020] to-[#080B14] border-2 border-purple/50 text-center shadow-[0_0_50px_rgba(139,53,255,0.25)] relative overflow-hidden">
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-96 h-32 bg-purple/20 blur-3xl pointer-events-none" />
+
+        <div className="relative z-10 space-y-4 max-w-2xl mx-auto">
+          <h2 className="text-3xl sm:text-4xl font-display font-black text-white">
+            Join Our WhatsApp Community
+          </h2>
+          <p className="text-xs sm:text-sm text-text-muted font-sans leading-relaxed">
+            Join the community to get the latest updates about Nexora Ideathon.
+          </p>
+          <a
+            href={event.whatsappCommunityUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group relative inline-flex items-center gap-3 px-10 py-4 rounded-full bg-gradient-to-r from-purple via-violet to-electric-blue text-white font-mono font-bold text-base tracking-wider uppercase shadow-[0_0_35px_rgba(139,53,255,0.6)] hover:shadow-[0_0_50px_rgba(85,216,255,0.7)] hover:scale-105 transition-all duration-300"
+          >
+            <span>JOIN WHATSAPP COMMUNITY FOR UPDATES</span>
+            <ExternalLink className="w-5 h-5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+          </a>
         </div>
       </div>
 
