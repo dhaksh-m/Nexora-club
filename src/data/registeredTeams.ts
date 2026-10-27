@@ -136,5 +136,35 @@ export const RAZORPAY_REGISTERED_TEAMS: RegisteredTeam[] = [
     teamName: 'Hell fire',
     memberCount: 5,
   },
-
+  {
+    id: 'TEAM-028',
+    teamName: 'Binary brains',
+    memberCount: 5,
+  },
+    {
+    id: 'TEAM-029',
+    teamName: 'Infinity loop',
+    memberCount: 5,
+  },
+    {
+    id: 'TEAM-030',
+    teamName: 'Bytenova',
+    memberCount: 5,
+  },
+    {
+    id: 'TEAM-031',
+    teamName: 'Team V5',
+    memberCount: 5,
+  },
+    {
+    id: 'TEAM-032',
+    teamName: 'SASSD TEAM',
+    memberCount: 5,
+  },
+    {
+    id: 'TEAM-033',
+    teamName: 'Alpha sparkle',
+    memberCount: 5,
+  },
+  
 ];
