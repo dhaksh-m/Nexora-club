@@ -22,7 +22,7 @@ import {
 export default function EventsPage() {
   const event = NEXORA_IDEATHON_EVENT;
 
-  // Countdown State to 29th Oct
+  // Countdown State to 31st Oct
   const [mounted, setMounted] = useState(false);
   const [timeLeft, setTimeLeft] = useState<{
     days: number;
@@ -40,8 +40,8 @@ export default function EventsPage() {
     setMounted(true);
 
     const calculateCountdown = () => {
-      // Target: 29th October 2026 09:00 AM IST
-      const targetDate = new Date('2026-10-29T09:00:00+05:30').getTime();
+      // Target: 31st October 2026 09:00 AM IST
+      const targetDate = new Date('2026-10-31T09:00:00+05:30').getTime();
       const now = new Date().getTime();
       const difference = targetDate - now;
 
@@ -160,12 +160,12 @@ export default function EventsPage() {
         </div>
       </div>
 
-      {/* Countdown to 29th Oct Section (Directly Above Guidelines) */}
+      {/* Countdown to 31st Oct Section (Directly Above Guidelines) */}
       <div className="relative p-6 sm:p-8 rounded-3xl bg-surface/90 border-2 border-purple/50 backdrop-blur-xl shadow-glow-purple/25 overflow-hidden text-center space-y-6">
         <div className="flex flex-col sm:flex-row items-center justify-between gap-3 border-b border-white/10 pb-4">
           <div className="flex items-center gap-2 text-xs font-mono text-cyan uppercase tracking-widest">
             <Clock className="w-4 h-4 text-cyan animate-pulse" />
-            <span>COUNTDOWN TO 29TH OCT</span>
+            <span>COUNTDOWN TO 31ST OCT</span>
           </div>
           <div className="flex items-center gap-2 text-xs font-mono text-text-muted">
             <span className="w-2 h-2 rounded-full bg-emerald-400 animate-ping" />
@@ -217,7 +217,7 @@ export default function EventsPage() {
         </div>
 
         <p className="text-xs font-mono text-text-muted">
-          EVENT DATE: <span className="text-white font-bold">29TH OCTOBER 2026</span> • ASSEMBLE YOUR TEAM & REGISTER BEFORE SLOTS CLOSE
+          EVENT DATE: <span className="text-white font-bold">31ST OCTOBER 2026</span> • ASSEMBLE YOUR TEAM & REGISTER BEFORE SLOTS CLOSE
         </p>
       </div>
 

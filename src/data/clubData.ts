@@ -327,7 +327,7 @@ export const LEADERSHIP_MEMBERS: LeadershipMember[] = [
 export const NEXORA_IDEATHON_EVENT = {
   id: 'nexora-ideathon-2026',
   title: 'NEXORA IDEATHON',
-  date: '29th Oct',
+  date: '31st Oct',
   fee: 'RS 50/-',
   registrationUrl: 'https://rzp.io/rzp/nexora2026',
   whatsappCommunityUrl: 'https://chat.whatsapp.com/LMMCmt2dsHL6yoYq9efupu',
@@ -378,7 +378,7 @@ export const UNCONFIRMED_EVENT: EventItem = {
   id: 'construction-01',
   title: 'NEXORA IDEATHON 2026',
   description: 'Solve real life problems faced by the students and make an existing system easier.',
-  date: '29th Oct',
+  date: '31st Oct',
   time: '9:00 AM Onwards',
   venue: 'Campus Tech Hub / Online',
   isConfirmed: true,
