@@ -166,5 +166,10 @@ export const RAZORPAY_REGISTERED_TEAMS: RegisteredTeam[] = [
     teamName: 'Alpha sparkle',
     memberCount: 5,
   },
+      {
+    id: 'TEAM-034',
+    teamName: 'Apex Minds',
+    memberCount: 5,
+  },
   
 ];
