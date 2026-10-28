@@ -92,6 +92,12 @@ export default function EventsPage() {
             <span>REGISTRATION FEE: <strong className="text-cyan text-base">{event.fee}</strong></span>
           </div>
 
+          {/* Registration Deadline */}
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-amber-950/30 border border-amber-500/50 text-amber-200 font-mono text-sm font-bold">
+            <Clock className="w-4 h-4 text-amber-400" />
+            <span>LAST DATE TO REGISTER: {event.registrationDeadline}</span>
+          </div>
+
           {/* Team Size Badge */}
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-surface border border-white/10 text-text-muted font-mono text-xs">
             <Users className="w-4 h-4 text-violet" />

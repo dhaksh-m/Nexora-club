@@ -91,11 +91,6 @@ const LeaderPortrait: React.FC<{ member: LeadershipMember; theme: typeof DEFAULT
           </div>
         )}
 
-        {/* Institution Badge */}
-        <div className="mt-2 inline-flex items-center gap-1.5 text-[11px] font-mono text-text-muted bg-surface-soft/80 px-3 py-1 rounded-full border border-white/5">
-          <Building className={`w-3.5 h-3.5 ${theme.text}`} />
-          <span className="truncate max-w-[240px]">{member.institution}</span>
-        </div>
       </div>
     </div>
   );

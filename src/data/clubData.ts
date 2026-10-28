@@ -290,7 +290,7 @@ export const LEADERSHIP_MEMBERS: LeadershipMember[] = [
   },
   {
     id: 'Technical Chair',
-    name: 'Dr. A. Srinivasula reddy',
+    name: 'Dr. A. Srinivasula Reddy',
     role: 'Professor in EEE & PRINCIPAL, SDES',
     category: 'Technical Chair',
     institution: 'Sree Dattha Institute of Engineering & Science (Autonomous)',
@@ -328,6 +328,7 @@ export const NEXORA_IDEATHON_EVENT = {
   id: 'nexora-ideathon-2026',
   title: 'NEXORA IDEATHON',
   date: '31st Oct',
+  registrationDeadline: '29th Oct 2026, 11:30 PM',
   fee: 'RS 50/-',
   registrationUrl: 'https://rzp.io/rzp/nexora2026',
   whatsappCommunityUrl: 'https://chat.whatsapp.com/LMMCmt2dsHL6yoYq9efupu',

@@ -139,12 +139,12 @@ export const RAZORPAY_REGISTERED_TEAMS: RegisteredTeam[] = [
   {
     id: 'TEAM-028',
     teamName: 'Binary brains',
-    memberCount: 5,
+    memberCount: 4,
   },
     {
     id: 'TEAM-029',
     teamName: 'Infinity loop',
-    memberCount: 5,
+    memberCount: 4,
   },
     {
     id: 'TEAM-030',
@@ -166,10 +166,24 @@ export const RAZORPAY_REGISTERED_TEAMS: RegisteredTeam[] = [
     teamName: 'Alpha sparkle',
     memberCount: 5,
   },
-      {
+    {
     id: 'TEAM-034',
     teamName: 'Apex Minds',
+    memberCount: 4,
+  },
+  {
+    id: 'TEAM-035',
+    teamName: 'The sparkers',
     memberCount: 5,
   },
-  
+    {
+    id: 'TEAM-036',
+    teamName: 'The Solutionaries',
+    memberCount: 5,
+  }, 
+  {
+    id: 'TEAM-037',
+    teamName: 'Code crackers',
+    memberCount: 4,
+  },
 ];
