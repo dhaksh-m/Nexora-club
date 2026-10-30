@@ -181,9 +181,34 @@ export const RAZORPAY_REGISTERED_TEAMS: RegisteredTeam[] = [
     teamName: 'The Solutionaries',
     memberCount: 5,
   }, 
-  {
+ {
     id: 'TEAM-037',
     teamName: 'Code crackers',
     memberCount: 4,
+  }, 
+   {
+    id: 'TEAM-038',
+    teamName: 'Code crackers',
+    memberCount: 5,
+  }, 
+   {
+    id: 'TEAM-039',
+    teamName: 'Code crackers',
+    memberCount: 3,
+  }, 
+   {
+    id: 'TEAM-040',
+    teamName: 'Code crackers',
+    memberCount: 3,
+  }, 
+     {
+    id: 'TEAM-041',
+    teamName: 'TECH TITANS',
+    memberCount: 5,
+  }, 
+       {
+    id: 'TEAM-042',
+    teamName: 'Beta innovators',
+    memberCount: 5,
   },
 ];
