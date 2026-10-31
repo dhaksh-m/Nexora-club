@@ -217,4 +217,4 @@ export const RAZORPAY_REGISTERED_TEAMS: RegisteredTeam[] = [
     memberCount: 3,
   },
 ];
-];
+
